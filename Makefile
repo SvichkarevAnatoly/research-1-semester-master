@@ -7,7 +7,6 @@ TEXFILE = report-main.tex
 INCLUDES = \
 	report-abstract.tex \
 	report-executors.tex \
-	report-appendix.tex \
 	report-intro.tex \
 	report-titlepage.tex \
 	report-conclusions.tex \
