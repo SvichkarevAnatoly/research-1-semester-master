@@ -11,9 +11,7 @@ INCLUDES = \
 	report-conclusions.tex \
 	report-legend.tex
 BIBLIO = \
-	gul2.bib \
-	dps.bib \
-	gur.bib
+	citations.bib
 STYLES = \
 	thesisby.cls \
 	utf8gost71u.bst
