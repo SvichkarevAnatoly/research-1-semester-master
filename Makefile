@@ -6,7 +6,6 @@ PDFLATEX = pdflatex --file-line-error-style --shell-escape
 TEXFILE = report-main.tex
 INCLUDES = \
 	report-abstract.tex \
-	report-executors.tex \
 	report-intro.tex \
 	report-titlepage.tex \
 	report-conclusions.tex \
