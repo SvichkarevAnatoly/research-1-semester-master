@@ -48,9 +48,7 @@ clean:
 	$(TEXFILE:.tex=.log) \
 	$(TEXFILE:.tex=.out) \
 	$(TEXFILE:.tex=.pdf) \
-	$(TEXFILE:.tex=.toc) \
-	kkozlov-4-1.aux \
-	syspatho-fin-conclusions.aux
+	$(TEXFILE:.tex=.toc) 
 
 veryclean: clean
 	@rm -f \
