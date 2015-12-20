@@ -7,9 +7,10 @@ TEXFILE = report-main.tex
 INCLUDES = \
 	report-abstract.tex \
 	report-intro.tex \
+	report-legend.tex \
 	report-titlepage.tex \
-	report-conclusions.tex \
-	report-legend.tex
+	report-main-part.tex \
+	report-conclusions.tex
 BIBLIO = \
 	citations.bib
 STYLES = \
