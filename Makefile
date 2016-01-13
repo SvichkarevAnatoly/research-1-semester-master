@@ -10,7 +10,8 @@ INCLUDES = \
 	report-legend.tex \
 	report-titlepage.tex \
 	report-main-part.tex \
-	report-conclusions.tex
+	report-conclusions.tex \
+	report-end.tex
 BIBLIO = \
 	citations.bib
 STYLES = \
