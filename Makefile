@@ -5,13 +5,13 @@ BIBTEX = bibtex
 PDFLATEX = pdflatex --file-line-error-style --shell-escape
 TEXFILE = report-main.tex
 INCLUDES = \
-	report-abstract.tex \
-	report-intro.tex \
-	report-legend.tex \
-	report-titlepage.tex \
-	report-main-part.tex \
-	report-conclusions.tex \
-	report-end.tex
+	parts/report-abstract.tex \
+	parts/report-intro.tex \
+	parts/report-legend.tex \
+	parts/report-titlepage.tex \
+	parts/report-main-part.tex \
+	parts/report-conclusions.tex \
+	parts/report-end.tex
 BIBLIO = \
 	citations.bib
 STYLES = \
