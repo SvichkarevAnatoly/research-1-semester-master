@@ -3,15 +3,15 @@
 LATEX = latex
 BIBTEX = bibtex
 PDFLATEX = pdflatex --file-line-error-style --shell-escape
-TEXFILE = report-main.tex
+TEXFILE = main.tex
 INCLUDES = \
-	parts/report-abstract.tex \
-	parts/report-intro.tex \
-	parts/report-legend.tex \
-	parts/report-titlepage.tex \
-	parts/report-main-part.tex \
-	parts/report-conclusions.tex \
-	parts/report-end.tex
+	parts/abstract.tex \
+	parts/intro.tex \
+	parts/legend.tex \
+	parts/titlepage.tex \
+	parts/main-part.tex \
+	parts/conclusions.tex \
+	parts/end.tex
 BIBLIO = \
 	citations.bib
 STYLES = \
