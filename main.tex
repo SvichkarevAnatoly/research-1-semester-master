@@ -6,7 +6,16 @@
 \hypersetup{
     allcolors=black
 }
+
 \usepackage{lastpage} % для указания общего числа страниц
+
+% для подсчёта числа источников литературы,
+% но работает только после второй сборки
+\usepackage{totcount}
+\newtotcounter{citenum}
+\def\oldcite{}
+\let\oldcite=\bibcite
+\def\bibcite{\stepcounter{citenum}\oldcite}
 
 \newcommand{\No}{\textnumero}
 
