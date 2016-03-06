@@ -3,7 +3,7 @@
 LATEX = latex
 BIBTEX = bibtex
 PDFLATEX = pdflatex --file-line-error-style --shell-escape
-TEXFILE = main.tex
+TEXFILE = Svichkarev_report.tex
 INCLUDES = \
 	parts/abstract.tex \
 	parts/intro.tex \
