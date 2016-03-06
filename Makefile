@@ -9,7 +9,7 @@ INCLUDES = \
 	parts/intro.tex \
 	parts/legend.tex \
 	parts/titlepage.tex \
-	parts/main-part.tex \
+	parts/main/main-part.tex \
 	parts/conclusions.tex \
 	parts/end.tex
 BIBLIO = \
