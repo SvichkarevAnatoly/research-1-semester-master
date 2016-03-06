@@ -9,7 +9,13 @@ INCLUDES = \
 	parts/intro.tex \
 	parts/legend.tex \
 	parts/titlepage.tex \
-	parts/main/main-part.tex \
+	parts/main/header.tex \
+	parts/main/theory.tex \
+	parts/main/implementation.tex \
+	parts/main/interpreter.tex \
+	parts/main/test_function.tex \
+	parts/main/experiment.tex \
+	parts/main/tracker.tex \
 	parts/conclusions.tex \
 	parts/end.tex
 BIBLIO = \
