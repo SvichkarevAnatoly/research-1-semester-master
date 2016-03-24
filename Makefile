@@ -9,7 +9,6 @@ INCLUDES = \
 	parts/intro.tex \
 	parts/legend.tex \
 	parts/titlepage.tex \
-	parts/main/header.tex \
 	parts/main/theory.tex \
 	parts/main/implementation.tex \
 	parts/main/interpreter.tex \
