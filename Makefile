@@ -23,10 +23,10 @@ STYLES = \
 	thesisby.cls \
 	utf8gost71u.bst
 FIGURES = \
-	rastrigin.eps \
-	m5.eps \
-	m10.eps \
-	tukey.eps
+	figs/rastrigin.eps \
+	figs/m5.eps \
+	figs/m10.eps \
+	figs/tukey.eps
 
 .PHONY: pdf clean veryclean
 
