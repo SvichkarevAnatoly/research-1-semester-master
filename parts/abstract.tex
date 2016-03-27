@@ -1,6 +1,17 @@
 \chapter*{РЕФЕРАТ}
 
-Отчёт \pageref{LastPage} стр., 1 часть, 2 рис., \total{citenum} источника
+% регистрируем счётчики в системе totcounter
+\regtotcounter{totalcount@figure}
+\regtotcounter{totalcount@table}       % Если поставить в преамбуле то ошибка в числе таблиц
+\regtotcounter{TotPages}               % Если поставить в преамбуле то ошибка в числе страниц
+\regtotcounter{citenum}
+
+Отчёт \formbytotal{TotPages}{страниц}{а}{ы}{},
+1 часть,
+\formbytotal{totalcount@figure}{рисун}{ок}{ка}{ков},
+\formbytotal{totalcount@table}{таблиц}{а}{ы}{}.
+\formbytotal{citenum}{источник}{}{а}{ов}.
+\bigskip
 
 Ключевые слова:
 МЕТОД ПОЛНОСТЬЮ ПАРАЛЛЕЛЬНОЙ РАЗНОСТНОЙ ЭВОЛЮЦИИ,
