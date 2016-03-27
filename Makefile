@@ -30,25 +30,15 @@ FIGURES = \
 
 .PHONY: pdf clean veryclean
 
-pdf: $(TEXFILE:.tex=.pdf)
-	evince $(TEXFILE:.tex=.pdf) &
-
-%.pdf: %.tex $(INCLUDES) $(STYLES) $(BIBLIO) $(FIGURES)
-	( \
-	$(PDFLATEX) $<; \
-	while grep -q "Rerun to get cross-references right." $(<:.tex=.log); \
-	do \
-		$(PDFLATEX) $<; \
-	done \
-	)
+build: $(TEXFILE) $(INCLUDES) $(STYLES) $(BIBLIO) $(FIGURES)
+	$(PDFLATEX) $<;
 	$(BIBTEX) $(<:.tex=)
-	( \
-	$(PDFLATEX) $<; \
-	while grep -q "Rerun to get cross-references right." $(<:.tex=.log); \
-	do \
-		$(PDFLATEX) $<; \
-	done \
-	)
+	$(PDFLATEX) $<;
+	$(PDFLATEX) $<;
+	$(PDFLATEX) $<;
+
+pdf: build
+	evince $(TEXFILE:.tex=.pdf) &
 
 clean:
 	@rm -f \
