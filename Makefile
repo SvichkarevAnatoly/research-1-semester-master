@@ -22,15 +22,18 @@ BIBLIO = \
 STYLES = \
 	thesisby.cls \
 	utf8gost71u.bst
-TARGZ = tar zcvf
-EXTRA_DIST = *.eps *.bib Makefile
+FIGURES = \
+	rastrigin.eps \
+	m5.eps \
+	m10.eps \
+	tukey.eps
 
-.PHONY: pdf clean veryclean dist
+.PHONY: pdf clean veryclean
 
 pdf: $(TEXFILE:.tex=.pdf)
-# $(INCLUDES)
+	evince $(TEXFILE:.tex=.pdf) &
 
-%.pdf: %.tex $(INCLUDES) $(STYLES) $(BIBLIO)
+%.pdf: %.tex $(INCLUDES) $(STYLES) $(BIBLIO) $(FIGURES)
 	( \
 	$(PDFLATEX) $<; \
 	while grep -q "Rerun to get cross-references right." $(<:.tex=.log); \
@@ -63,12 +66,4 @@ veryclean: clean
 	$(TEXFILE:.tex=.brf) \
 	$(TEXFILE:.tex=.bm)
 	@rm -f *.pdf
-
-dist:
-	$(TARGZ) \
-	$(TEXFILE:.tex=.tgz) \
-	$(TEXFILE) \
-	$(INCLUDES) \
-	$(EXTRA_DIST) \
-	$(TEXFILE:.tex=.pdf)
 
