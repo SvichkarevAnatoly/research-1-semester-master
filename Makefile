@@ -62,6 +62,7 @@ veryclean: clean
 	$(TEXFILE:.tex=.blg) \
 	$(TEXFILE:.tex=.brf) \
 	$(TEXFILE:.tex=.bm)
+	@rm -f *.pdf
 
 dist:
 	$(TARGZ) \
