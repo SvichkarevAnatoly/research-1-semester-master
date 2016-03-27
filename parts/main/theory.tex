@@ -50,23 +50,24 @@
 
 Используются два мутантных вектора,
 на их основе определяется третий пробный вектор.
-Первый мутантный вектор определяется по соотношению \ref{mutant},
+Первый мутантный вектор определяется
+по соотношению \eqref{mutant},
 второй мутантный вектор определяется
 по аналогии с правилом треугольника \cite{zaharie2002parameter}:
 
-\begin{IEEEeqnarray}{rCl} \label{mutant2}
+\begin{IEEEeqnarray*}{rCl}
     z & = & \frac{v_1 + v_2 + v_3}{3}
     + (s_2 - s_1)(v_1 - v_2) \\
     && + (s_3 - s_2)(v_2 - v_3)
     + (s_1 - s_3)(v_3 - v_1), \nonumber
-\end{IEEEeqnarray}
+\end{IEEEeqnarray*}
 
 где
 
-\begin{equation}
+\begin{equation*}
     s_i = \frac{\abs{F(q_i)}}
     {\abs{F(q_1)} + \abs{F(q_2)} + \abs{F(q_3)}},
-\end{equation}
+\end{equation*}
 
 для \begin{math}i = 1, 2, 3\end{math}.
 
@@ -84,7 +85,7 @@
 Разнообразие популяции можно определить
 через дисперсии параметров популяции:
 
-\begin{equation}
+\begin{equation} \label{varj}
     var_j = \frac{1}{NP} \sum_{i = 0}^{NP - 1}
     \left(q_{i, j} - \frac{1}{NP} \sum_{k = 0}^{NP - 1}q_{k, j}\right)^2
 \end{equation}
@@ -93,7 +94,7 @@
 Введём отдельные константы масштабирования $S_j$ и
 вероятности скрещивания $p_j$ для каждого параметра:
 
-\begin{equation}
+\begin{equation*}
     S_j = \left\{ \,
         \begin{IEEEeqnarraybox}[][c]{l?s}
             \IEEEstrut
@@ -104,9 +105,9 @@
             \IEEEstrut
         \end{IEEEeqnarraybox}
         \right.
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
     p_j = \left\{ \,
         \begin{IEEEeqnarraybox}[][c]{l?s}
             \IEEEstrut
@@ -117,12 +118,13 @@
             \IEEEstrut
         \end{IEEEeqnarraybox}
         \right.
-\end{equation}
+\end{equation*}
 где
-\begin{equation}
+\begin{equation*}
     c_j^{new} = \gamma \cdot \left(\frac{var_j}{var_j^{new}}\right)
-\end{equation}
-где $\gamma$ --- новый управляющий параметр.
+\end{equation*}
+где $\gamma$ --- новый управляющий параметр,
+a $var_j$ определяется по \eqref{varj}.
 
 Управляющие параметры инициализируются
 случайным образом, после каждой итерации
